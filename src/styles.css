@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f6f5f0;
+  --color-ink: #202720;
+  --color-muted: #69736b;
+  --color-line: #d8ddd3;
+  --color-accent: #b64d36;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--color-paper);
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer components {
+  .site-shell {
+    background-color: #1c1917;
+    background-image: linear-gradient(rgba(28, 25, 23, 0.7), rgba(28, 25, 23, 0.7)), url("assets/IMG_4222.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply, normal;
+  }
+
+  .article-copy p {
+    margin: 0 0 24px;
+  }
+
+  .article-copy h2 {
+    margin: 44px 0 15px;
+    font-size: 31px;
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  .article-copy a {
+    color: var(--color-accent);
+  }
+
+  .article-copy code {
+    font-family: var(--font-mono);
+    font-size: 0.82em;
+  }
+
+  .article-copy pre {
+    overflow-x: auto;
+    padding: 20px;
+    background: #BF9E63;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .article-copy pre code {
+    font-size: inherit;
+  }
+}
